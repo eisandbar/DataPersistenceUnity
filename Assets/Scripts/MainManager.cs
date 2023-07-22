@@ -61,6 +61,7 @@ public class MainManager : MonoBehaviour
             if (DataPersistence.instance != null && m_Points > DataPersistence.instance.score)
             {
                 DataPersistence.instance.score = m_Points;
+                DataPersistence.instance.highscoreUsername = DataPersistence.instance.currentUsername;
                 DataPersistence.instance.SaveScore();
                 SetHighscore();
             }
